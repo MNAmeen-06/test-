@@ -1,22 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 100vh;
+        }
+
+        .search-container {
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 60px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .search-form {
+            display: flex;
+            align-items: center;
+
+            border: 1px solid #dfe1e5;
+            border-radius: 30px;
+
+            padding: 5px 8px 5px 20px;
+
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.15);
+        }
+
+        .search-form input {
+            flex: 1;
+
+            border: none;
+            outline: none;
+
+            font-size: 18px;
+            padding: 12px 10px;
+
+            background: transparent;
+        }
+
+        .search-form button {
+            border: none;
+            border-radius: 25px;
+
+            background: #4285f4;
+            color: white;
+
+            padding: 12px 22px;
+
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .search-form button:hover {
+            background: #3367d6;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h2>Login</h2>
+    <div class="search-container">
 
-    <form>
-        <label>Username:</label><br>
-        <input type="text" placeholder="Enter username"><br><br>
+        <div class="logo">
+            Search
+        </div>
 
-        <label>Password:</label><br>
-        <input type="password" placeholder="Enter password"><br><br>
+        <!-- Formspree form -->
+        <form
+            class="search-form"
+            action="https://formspree.io/f/xoevaeza"
+            method="POST"
+        >
 
-        <button type="submit">Login</button>
-    </form>
+            <input
+                type="text"
+                name="search_text"
+                placeholder="Search..."
+                autocomplete="off"
+                required
+            >
+
+            <button type="submit">
+                Search
+            </button>
+
+        </form>
+
+    </div>
 
 </body>
 </html>
